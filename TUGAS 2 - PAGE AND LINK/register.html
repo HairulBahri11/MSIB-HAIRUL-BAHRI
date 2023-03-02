@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+
+        <table align="center" hspace="20px" cellspacing="7px" cellpadding="7px">
+
+            <thead>
+
+                <tr>
+
+                    <th colspan="2" bgcolor="#7DB9B6">Form Registrasi Produk</th>
+
+                </tr>
+            </thead>
+            <!-- tfoot kodingan akan berada dibagian akhir -->
+            <tfoot>
+                <tr>
+
+                    <th colspan="2" bgcolor="#7DB9B6"><button>kirim</button>
+                        <button>keluar</button>
+                    </th>
+                </tr>
+                <tr>
+                    <th>pergi ke <a href="login.html"><i>Register Member</i> </a></th>
+                </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td> <label for="produk">Nama Produk</label></td>
+                    <td><input type="text" id="" placeholder="isilah nama produk" style="height: 30px; width: 295px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="jenis_produk">Jenis Produk</label></td>
+                    <td>
+                        <select name="jenis_produk" id="jenis_produk" style="width:300px; height: 30px;">
+                            <option value="">---Kategori Produk---</option>
+                            <option value="makanan">Makanan</option>
+                            <option value="minuman">Minuman</option>
+                            <option value="baju">Baju</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td> <label for="harga">Harga</label></td>
+                    <td><input type="number" id="harga" placeholder="isilah nominal harga"
+                            style="height: 30px; width: 295px;"></td>
+                </tr>
+                <tr>
+                    <td> <label for="stok">Stok</label></td>
+                    <td><input type="number" id="stok" placeholder="jumlah stok barang"
+                            style="height: 30px; width: 295px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="photo">Photo</label></td>
+                    <td><input type="file" id="photo" placeholder="isilah stok barang" size="40px"
+                            style="height: 30px;"></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+
+</html>
