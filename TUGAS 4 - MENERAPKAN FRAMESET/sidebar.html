@@ -1,0 +1,83 @@
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+*{
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  background-color: #8b75c5;
+}
+
+.sidebar {
+  position: fixed;
+  left: 0px;
+  width: 300px;
+  height: 10%;
+  background: #d0d5d8;
+  transition: all .5s ease;
+
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  /* line-height: 10px; */
+  text-align: center;
+ 
+  user-select: none;
+}
+.sidebar ul a{
+  display: block;
+  height: 100%;
+  width: 100%;
+ 
+  line-height: 40px;
+  font-size: 13px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgb(240, 233, 233);
+  border-top: 1px solid rgba(255,255,255,.1);
+  transition: .4s;
+}
+ul li:hover a{
+  padding-left: 10px;
+  background-color: #4c2aa8;
+}
+.sidebar ul a i{
+  margin-right: 16px;
+}
+
+/* label #btn{
+  left: 250px;
+  top: 25px;
+  font-size: 35px;
+  color: rgb(206, 3, 3);
+  padding: 6px 12px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all .5s;
+} */
+/* #check:checked ~ .sidebar{
+  left: -250px;
+} */
+
+
+</style>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<body>
+    <frameset>
+        <div class="sidebar">
+            <ul>
+                <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+                <li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
+                <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+                <li><a href="#"><i class="fas fa-calendar-week"></i>Events</a></li>
+                <li><a href="#"><i class="far fa-question-circle"></i>About</a></li>
+                <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
+                <li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
+            </ul>
+        </div>
+    </frameset>
+
+</body>
+<script></script>
