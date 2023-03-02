@@ -1,0 +1,84 @@
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        /* background-color: #fdfafa; */
+    }
+
+    .hero {
+
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        width: 100%;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        /* padding-top: 5px; */
+        padding-left: 5%;
+        padding-right: 5%;
+        background-color: rgb(38, 21, 80);
+
+
+    }
+
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        text-align: right;
+    }
+
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    button {
+        background-color: #b3aec9;
+        color: #ffffff;
+        border: none;
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 15px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    img:hover {
+        transform: scale(1.5);
+        transition: 0.2s;
+    }
+   button:hover{
+    background-color: rgb(26, 22, 31);
+    color: white;
+    transition: 0.2s;
+   }
+</style>
+
+<body>
+    <frameset>
+        <div class="hero">
+            <nav>
+                <img src="Img/Interest.png" alt="logo">
+                <ul>
+                    <li><a href="home.html" target="main">Home</a></li>
+                    <li><a href="produk.html" target="main">Shop</a></li>
+                    <li><a href="">Category</a></li>
+                    <li><a href="biodata.html" target="main">Profile</a></li>
+                    <button type="button"> Login</button>
+                </ul>
+            </nav>
+        </div>
+    </frameset>
+</body>
