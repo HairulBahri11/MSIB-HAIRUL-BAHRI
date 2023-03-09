@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container">
+        <!-- Brand/logo -->
+        <a class="navbar-brand " href="index.html">Hairul Bahri</a>
+        <!-- Links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="segitiga.html">Segitiga</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="persegipanjang.html">Persegi Panjang</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="jajargenjang.html">Jajar Genjang</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="row">
+    <div class="col">
+
+    </div>
+    <div class="col mt-5">
+        <b>Soal.</b>
+        <p>Hitunglah luas dan keliling dari bangun datar segitiga berikut ini</p>
+        <img src="soal_segitiga.jpeg" alt="">
+        <p><b>Diketahui :</b> <br>
+            <script>
+                let alas = 12;
+                let tinggi = 6;
+                let BC = 8;
+                let AC = Math.sqrt(alas*alas - BC*BC);
+                document.write("Alas = " + alas + "<br>");
+                document.write("Tinggi = " + tinggi + "<br>");
+                document.write("BC = " + BC + "<br>");
+                document.write("AC = √" + alas + "² - " + BC + "² = √" + (alas*alas + BC*BC) + " = " + AC +"<br>");
+                
+
+            </script>
+
+        </p>
+        <b>Jawab : <br></b>
+        <script>
+            let luas = 1 / 2 * alas * tinggi;
+            let keliling = alas + AC + BC;
+            document.write("Luas = 1/2 x " + alas + " x " + tinggi + " = " + luas + "<br>");
+            document.write("Keliling = " + alas + " + " + AC + " + " + BC + " = " + keliling);
+        </script>
+    </div>
+    <div class="col">
+
+    </div>
+</div>
