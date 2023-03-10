@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <!-- Brand/logo -->
+            <a class="navbar-brand " href="index.html">Hairul Bahri</a>
+            <!-- Links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link acitve" href="ifelse.html">If Else</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="switchcase.html">Switch Case</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div  style="margin-top: 5%; margin-bottom:0; height:100%; width: 100%;">
+        <div class="row">
+            <div class="col">
+
+            </div>
+            <div class="col">
+                <p><b>Soal.</b></p>
+                <p>
+                    Diketahui
+
+                    Pegawai: nama_kalian <br>
+
+                    Jabatan : manager <br>
+
+                    status : belum menikah <br>
+
+                    Proses: <br>
+
+                    Cetak data pegawai , jabatan, gaji dan lainnya dengan ketentuan <br>
+
+                    Gaji pokok : jika jabatan manager(10), Asisten manager(8), Staff(5) Juta <br>
+
+                    Tunjangan Jabatan = 10% dari Gaji pokok <br>
+
+                    BPJS = 10% dari gaji pokok <br>
+
+                    Tunjangan keluarga bagia yang sudah menikah sebesar 10%  <br>
+
+                   <b> Totalkan seluruh pendapatan atau penghasilan</b> <br>
+                </p>
+                <p><b>Jawab.</b></p>
+                <p>
+                    <script>
+                        var nama = "Hairul Bahri";
+                        var jabatan = "Manager";
+                        var status = "Belum Menikah";
+                        var gajiPokok = 0;
+                        var tunjanganJabatan = 0;
+                        var bpjs = 0;
+                        var tunjanganKeluarga = 0;
+                        var totalPendapatan = 0;
+
+                        switch (jabatan) {
+                            case "Manager":
+                                gajiPokok = 10000000;
+                                break;
+                            case "Asisten Manager":
+                                gajiPokok = 8000000;
+                                break;
+                            case "Staff":
+                                gajiPokok = 5000000;
+                                break;
+                            default:
+                                break;
+                        }
+
+                        tunjanganJabatan = 0.1 * gajiPokok;
+                        bpjs = 0.1 * gajiPokok;
+
+                        switch (status) {
+                            case "Menikah":
+                                tunjanganKeluarga = gajiPokok * 0.1;
+                                break;
+                            default:
+                                break;
+                        }
+
+                        totalPendapatan = gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+                        document.write("Nama : " + nama + "<br>");
+                        document.write("Jabatan : " + jabatan + "<br>");
+                        document.write("Status : " + status + "<br>");
+                        document.write("Gaji Pokok : " + gajiPokok + "<br>");
+                        document.write("Tunjangan Jabatan : " + tunjanganJabatan + "<br>");
+                        document.write("BPJS : " + bpjs + "<br>");
+                        document.write("Tunjangan Keluarga : " + tunjanganKeluarga + "<br>");
+                        document.write("Total Pendapatan : " + totalPendapatan + "<br>");
+                    </script>
+                </p>
+            </div>
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
