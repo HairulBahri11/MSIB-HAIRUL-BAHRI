@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>TUGAS 7</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <div class="container">
+            <!-- Brand/logo -->
+            <a class="navbar-brand acitve" href="index.html">Hairul Bahri</a>
+            <!-- Links -->
+            <ul class="navbar-nav">
+
+            </ul>
+        </div>
+    </nav>
+
+    <!-- //soal set grade A - E (menggunakan if multi kondisi)
+    // A = 90 - 100, B 80 - 89 dan seterusnya sampai E
+
+    //set predikat (menggunakan swtich case)
+
+    //A = Sangat baik, B = Baik, C = Cukup, D= Kurang, E = SAngat kurang
+    //set warna warni table menggunakan looping -->
+
+    <div class="row mt-5">
+
+        <div class="col-lg-3">
+
+        </div>
+        <div class="col-lg-6 ">
+            <h5 class="text-center mb-5">Daftar Nilai Ujian Komputer <br>
+                SMKN 1 JOSGANDOS</h5>
+            <script>
+
+                let p1 = { nama: "Arip", nilai: 90, kelas: "XII RPL 1" };
+                let p2 = { nama: "Ali", nilai: 81, kelas: "XII RPL 2" };
+                let p3 = { nama: "Aldi", nilai: 72, kelas: "XII RPL 3" };
+                let p4 = { nama: "Ani", nilai: 63, kelas: "XII RPL 4" };
+                let p5 = { nama: "Budi", nilai: 50, kelas: "XII RPL 3" };
+                let p6 = { nama: "Caca", nilai: 40, kelas: "XII RPL 1" };
+                let p7 = { nama: "Dedi", nilai: 80, kelas: "XII RPL 1" };
+                let p8 = { nama: "Euis", nilai: 70, kelas: "XII RPL 2" };
+                let p9 = { nama: "Fafa", nilai: 90, kelas: "XII RPL 3" };
+                let p10 = { nama: "Gaga", nilai: 100, kelas: "XII RPL 1" };
+                let p11 = { nama: "Hani", nilai: 90, kelas: "XII RPL 2" };
+                let p12 = { nama: "Ika", nilai: 83, kelas: "XII RPL 3" };
+                let p13 = { nama: "Beei", nilai: 75, kelas: "XII RPL 4" };
+                let p14 = { nama: "Heli", nilai: 89, kelas: "XII RPL 1" };
+                let p15 = { nama: "Loi", nilai: 67, kelas: "XII RPL 2" };
+                let p16 = { nama: "Dirrei", nilai: 71, kelas: "XII RPL 4" };
+
+
+                let person = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15, p16];
+            </script>
+
+            <table style="text-align: center; width: 100%; font-size: 13px;">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama</th>
+                        <th>Nilai</th>
+                        <th>Predikat</th>
+                        <th>Keterangan</th>
+                        <th>Kelas</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <script>
+                        let nomor = 1;
+                        for (p of person) {
+                            if (p.nilai >= 90 && p.nilai <= 100) {
+                                var predikat = "A";
+                            } else if (p.nilai >= 80 && p.nilai <= 89) {
+                                var predikat = "B";
+                            } else if (p.nilai >= 70 && p.nilai <= 79) {
+                                var predikat = "C";
+                            } else if (p.nilai >= 60 && p.nilai <= 69) {
+                                var predikat = "D";
+                            } else if (p.nilai >= 0 && p.nilai <= 59) {
+                                var predikat = "E";
+                            }
+
+                            let keterangan;
+                            let warna;
+                            switch (predikat) {
+                                case "A":
+                                    keterangan = "Sangat Baik";
+                                    break;
+                                case "B":
+                                    keterangan = "Baik";
+                                    break;
+                                case "C":
+                                    keterangan = "Cukup";
+                                    break;
+                                case "D":
+                                    keterangan = "Kurang";
+                                    break;
+                                case "E":
+                                    keterangan = "Sangat Kurang";
+                                    break;
+                            }
+
+
+                            if (nomor % 2 == 0) {
+                                warna = "white";
+                            } else {
+                                warna = "lightgrey";
+                            }
+
+
+
+                            document.write(`
+                                <tr bgcolor="${warna}">
+                                    <td>${nomor++}</td>
+                                    <td>${p.nama}</td>
+                                    <td>${p.nilai}</td>
+                                    <td>${predikat}<span></td>  
+                                    <td>${keterangan}</td> 
+                                    <td>${p.kelas}</td>       
+                                             
+                                </tr>`);
+                        }   
+                    </script>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="col">
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
