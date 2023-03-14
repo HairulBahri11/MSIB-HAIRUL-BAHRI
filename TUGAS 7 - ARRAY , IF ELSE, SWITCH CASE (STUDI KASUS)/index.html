@@ -68,6 +68,7 @@
                         <th>Nilai</th>
                         <th>Predikat</th>
                         <th>Keterangan</th>
+                        <th>Status</th>
                         <th>Kelas</th>
                     </tr>
                 </thead>
@@ -76,6 +77,9 @@
                     <script>
                         let nomor = 1;
                         for (p of person) {
+
+                            let cek = (p.nilai >= 70) ? "Lulus" : "Gagal";
+
                             if (p.nilai >= 90 && p.nilai <= 100) {
                                 var predikat = "A";
                             } else if (p.nilai >= 80 && p.nilai <= 89) {
@@ -115,17 +119,16 @@
                                 warna = "lightgrey";
                             }
 
-
-
                             document.write(`
                                 <tr bgcolor="${warna}">
                                     <td>${nomor++}</td>
                                     <td>${p.nama}</td>
                                     <td>${p.nilai}</td>
                                     <td>${predikat}<span></td>  
-                                    <td>${keterangan}</td> 
+                                    <td>${keterangan}</td>
+                                    <td>${cek}</td>
                                     <td>${p.kelas}</td>       
-                                             
+                                            
                                 </tr>`);
                         }   
                     </script>
