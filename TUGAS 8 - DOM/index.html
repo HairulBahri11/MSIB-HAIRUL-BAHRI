@@ -1,12 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM JS</title>
+    <title> DOM Javascript</title>
+    <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body>
-    
+    <h1 align="center"> Form Input Javascript</h1>
+    <form action="" id="kalkulator">
+        <table border="1" align="center">
+            <tr>
+                <td><label for="">Angka 1 </label></td>
+                <td>:</td>
+                <td><input type="text" name="angka" placeholder="Masukkan angka pertama"></td>
+            </tr>
+            <tr>
+                <td><label for="">Angka 2</label></td>
+                <td>:</td>
+                <td><input type="text" name="angka2" placeholder="Masukkan angka kedua"></td>
+            </tr>
+            <tr>
+                <td><label for="">Hasil</label></td>
+                <td>:</td>
+                <td><input type="text" name="hasil" placeholder="hasil" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="button" onclick="tambah()">+</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="button" onclick="kurang()">-</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="button" onclick="kali()">*</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="button" onclick="bagi()">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <button type="button" onclick="pangkat()">x<sub>2</sub></button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script src="js/kalkulator.js"></script>
 </body>
+
 </html>
