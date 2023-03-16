@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <title>Belajar jQuery</title>
+    <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a.show').click(function () {
+                $('p.jquery').show(1000);
+            });
+
+            $('a.hide').click(function () {
+                $('p.jquery').hide(1000);
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <h1>Hello World With jQuery</h1>
+    <p><a href="#" class="show">Show</a>
+        <a href="#" class="hide">Hide</a>
+    </p>
+    <p class='jquery' style="display:none">Semboyan jQuery adalah
+        "write less, do more" dengan kata lain
+        "kesederhanaan dalam penulisan code,
+        tapi menampilkan banyak kelebihan</p>
+</body>
+
+</html>
