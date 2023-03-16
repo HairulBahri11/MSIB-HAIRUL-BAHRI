@@ -1,23 +1,23 @@
 function tambah() {
     let forms = document.getElementById('kalkulator');
-    let a1 = parseFloat(forms.angka.value);
-    let a2 = parseFloat(forms.angka2.value);
-    if (isNaN(a1) && isNaN(a2)) {
+    let x = parseFloat(forms.input1.value);
+    let y = parseFloat(forms.input2.value);
+    if (isNaN(x) || isNaN(y)) {
         alert("Maaf angka belum terisi");
     } else {
-        let total = a1 + a2;
+        let total = x + y;
         forms.hasil.value = total;
     }
 }
 
 function kurang() {
     let forms = document.getElementById('kalkulator');
-    let a1 = parseFloat(forms.angka.value);
-    let a2 = parseFloat(forms.angka2.value);
-    if (isNanN(a1) && isNaN(a2)) {
+    let x = parseFloat(forms.input1.value);
+    let y = parseFloat(forms.input2.value);
+    if (isNanN(x) || isNaN(y)) {
         alert("Maaf angka belum terisi");
     } else {
-        let total = a1 - a2;
+        let total = x - y;
         forms.hasil.value = total;
     }
 }
@@ -25,36 +25,36 @@ function kurang() {
 
 function kali() {
     let forms = document.getElementById('kalkulator');
-    let a1 = parseFloat(forms.angka.value);
-    let a2 = parseFloat(forms.angka2.value);
-    if (isNanN(a1) && isNaN(a2)) {
+    let x = parseFloat(forms.input1.value);
+    let y = parseFloat(forms.input2.value);
+    if (isNanN(x) || isNaN(y)) {
         alert("Maaf angka belum terisi");
     } else {
-        let total = a1 * a2;
+        let total = x * y;
         forms.hasil.value = total;
     }
 }
 
 function bagi() {
     let forms = document.getElementById('kalkulator');
-    let a1 = parseFloat(forms.angka.value);
-    let a2 = parseFloat(forms.angka2.value);
-    if (isNanN(a1) && isNaN(a2)) {
+    let x = parseFloat(forms.input1.value);
+    let y = parseFloat(forms.input2.value);
+    if (isNanN(x) || isNaN(y)) {
         alert("Maaf angka belum terisi");
     } else {
-        let total = a1 / a2;
+        let total = x / y;
         forms.hasil.value = total;
     }
 }
 
 function pangkat() {
-    if (isNanN(a1) && isNaN(a2)) {
+    let forms = document.getElementById('kalkulator');
+        let x = parseFloat(forms.input1.value);
+        let y = parseFloat(forms.input2.value);
+    if (isNanN(x) || isNaN(y)) {
         alert("Maaf angka belum terisi");
     } else {
-        let forms = document.getElementById('kalkulator');
-        let a1 = parseFloat(forms.angka.value);
-        let a2 = parseFloat(forms.angka2.value);
-        let total = Math.pow(a1, a2);
+        let total = Math.pow(x, y);
         forms.hasil.value = total;
     }
 }
