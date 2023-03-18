@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script type="text/javascript" src="jquery-3.6.4.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            //membuat semua gambar muncul
+            $('a.show').click(function () {
+                $('img.item1').show(1000);
+                $('img.item2').show(2000);
+                $('img.item3').show(3000);
+            });
+
+            //membuat semua gambar hilang
+            $('a.hide').click(function () {
+                $('img.item1').hide(1000);
+                $('img.item2').hide(2000);
+                $('img.item3').hide(3000);
+
+            });
+        });
+        //membuat item 1 menghilang
+        $(document).ready(function () {
+            $('img.item1').click(function () {
+                $('img.item1').hide(1000);
+            });
+        });
+        //membuat item 2 menghilang
+        $(document).ready(function () {
+            $('img.item2').click(function () {
+                $('img.item2').hide(1000);
+            });
+        });
+        //membuat item 3 menghilang
+        $(document).ready(function () {
+            $('img.item3').click(function () {
+                $('img.item3').hide(1000);
+            });
+        });
+    </script>
+    <style>
+       body{
+            font-family: sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        p,a{
+            margin-top: 5%;
+        }
+        a.show{
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a.hide{
+            padding: 10px;
+            background-color: #f44336;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        a.show:hover{
+            background-color: #45a049;
+        }
+        a.hide:hover{
+            background-color: #da190b;
+        }
+        .konten{
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Implementation Show And Hide Pictures</h2>
+    <hr>
+    <p style="text-align: center;">
+        <a href="#" class="show" style="text-decoration: none;">Show</a>
+        <a href="#" class="hide">Hide</a>
+    </p>
+
+    <div class="konten" style=" text-align: center;" >
+        <img src="img/item-1.png" class="item1" alt="Gambar 1">
+        <img src="img/item-2.png" class="item2" alt="Gambar 2">
+        <img src="img/item-3.png" class="item3" alt="Gambar 3">
+    </div>
+</body>
+</html>
