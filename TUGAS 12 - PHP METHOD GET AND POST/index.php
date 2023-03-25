@@ -133,9 +133,9 @@ if (isset($_POST['submit'])) {
                     <div class="mb-3 row">
                         <label for="input" class="col-sm-2 col-form-label">Status</label>
                         <div class="col-sm-10">
-                            <input type="radio" id="menikah" name="status" value="Menikah" class="menikah" />
+                            <input type="radio" id="menikah" name="status" value="Menikah" class="menikah" required />
                             <label for="menikah">Menikah</label><br>
-                            <input type="radio" id="tidakmenikah" name="status" value="Belum Menikah" class="tidakmenikah" />
+                            <input type="radio" id="tidakmenikah" name="status" value="Belum Menikah" class="tidakmenikah" required/>
                             <label for="tidakmenikah">Belum Menikah</label><br>
                         </div>
                     </div>
