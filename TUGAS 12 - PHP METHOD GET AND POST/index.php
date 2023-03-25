@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 if (isset($_POST['submit'])) {
     $jabatan = '';
     $anak = 0;
@@ -32,7 +33,7 @@ if (isset($_POST['submit'])) {
     $tunjangan_jabatan = 0.2 * $gajipokok;
 
     //menentukan tunjangan keluarga
-    if ($status == "Menikah") {
+    if ($status == "Menikah" ) {
         if ($anak <= 2) {
             $tunjangan_keluarga = 0.05 * $gajipokok;
         } elseif ($anak > 2 && $anak <= 5) {
@@ -46,9 +47,9 @@ if (isset($_POST['submit'])) {
     }
 
     //menentukan tunjangan zakat profesi
-
-    $tunjangan_zakat = ($agama == "Islam") ? $tunjangan_zakat = 0.025 * $gajipokok : $tunjangan_zakat = 0;
     $gaji_kotor = $gajipokok + $tunjangan_jabatan + $tunjangan_keluarga;
+    $tunjangan_zakat = ($agama == "Islam" && $gaji_kotor >= 6000000) ? $tunjangan_zakat = 0.025 * $gaji_kotor : $tunjangan_zakat = 0;
+    
     $take_home_pay = $gaji_kotor - $tunjangan_zakat;
 }
 ?>
