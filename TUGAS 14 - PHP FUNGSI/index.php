@@ -102,9 +102,9 @@ function kategori_skill()
 
 
     <div class="row">
-        <div class="col-lg-4">
+        <div class="col-lg-3">
         </div>
-        <div class="col-lg-4">
+        <div class="col-lg-6">
             <div class="konten mt-5 mb-5">
                 <h5 class="text-center">MY ROOMATE</h5>
                 <form class="mt-5" method="POST" action="">
@@ -122,7 +122,7 @@ function kategori_skill()
                     </div>
                     <div class="mb-3 row">
 
-                        <label for="input" class="col-sm-2 col-form-label">Gender</label>
+                        <label for="input" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                         <div class="col-sm-10">
                             <input type="radio" id="L" name="jk" value="L" required />
                             <label for="L">L</label><br>
