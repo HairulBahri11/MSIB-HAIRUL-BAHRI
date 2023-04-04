@@ -19,7 +19,7 @@
                         <nav class="sb-sidenav-menu-nested nav">
                             <a class="nav-link" href="index.php?url=pegawai">Data Pegawai</a>
                             <a class="nav-link" href="index.php?url=product">Data Produk</a>
-                            <a class="nav-link" href="index.php?url=product">Data Pembeli</a>
+                            <a class="nav-link" href="index.php?url=data">Data Pembeli</a>
                             <a class="nav-link" href="index.php?url=contact">Contact</a>
                             <a class="nav-link" href="index.php?url=about">About</a>
                         </nav>

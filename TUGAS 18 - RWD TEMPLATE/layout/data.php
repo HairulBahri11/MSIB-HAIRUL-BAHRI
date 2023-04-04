@@ -4,7 +4,7 @@
             <h1 class="mt-4">Data Pembeli</h1>
             <ol class="breadcrumb mb-4">
                 <li class="breadcrumb-item"><a href="index.php?url=dashboard">Dashboard</a></li>
-                <li class="breadcrumb-item active">Data Pemberli</li>
+                <li class="breadcrumb-item active">Data Pembeli</li>
             </ol>
             <div class="card mb-4">
                 <div class="card-body">
