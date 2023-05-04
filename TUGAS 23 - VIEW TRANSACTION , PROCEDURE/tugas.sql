@@ -77,6 +77,7 @@ DELIMITER $$
 CREATE PROCEDURE totalPesanannya()
 BEGIN
     SELECT COUNT(*) AS total_pesanan FROM pesanan;
+
 END
 $$
 DELIMITER ;
@@ -97,15 +98,19 @@ CALL totalPesanannya();
 
 
 -- tampilkan seluruh pesanan dari semua pelanggan
-SELECT * from pelanggan p JOIN pesanan ps ON p.id = ps.pelanggan_id;
+SELECT ps.tanggal, ps.total, p.nama_pelanggan, pr.nama , jp.nama , pa.qty FROM pesanan_items pa 
+JOIN pesanan ps ON pa.pesanan_id = ps.id
+JOIN pelanggan p ON ps.pelanggan_id = p.id 
+JOIN produk pr ON pa.produk_id = pr.id 
+JOIN jenis_produk jp ON pr.jenis_produk_id = jp.id 
 --output
--- +----+-------+----------------+------+-----------+------------+----------------+----------------------+----------+----+------------+---------+--------------+
--- | id | kode  | nama_pelanggan | jk   | tmp_lahir | tgl_lahir  | email          | alamat               | kartu_id | id | tanggal    | total   | pelanggan_id |
--- +----+-------+----------------+------+-----------+------------+----------------+----------------------+----------+----+------------+---------+--------------+
--- |  1 | OR001 | Hairul Bahri   | L    | Situbondo | 2002-04-02 | irul@gmail.com | Situbondo Jawa Timur |        2 |  1 | 2022-08-23 |  150000 |            1 |
--- |  3 | OR003 | Sofyan Saori   | L    | Bondowoso | 1998-04-01 | sof@gmail.com  | Bondowoso Jawa Timur |        2 |  2 | 2023-05-02 | 1456000 |            3 |
--- +----+-------+----------------+------+-----------+------------+----------------+----------------------+----------+----+------------+---------+--------------+
--- 2 rows in set (0.001 sec)
+-- +------------+---------+----------------+-----------------+--------+------+
+-- | tanggal    | total   | nama_pelanggan | nama            | nama   | qty  |
+-- +------------+---------+----------------+-----------------+--------+------+
+-- | 2022-08-23 |  150000 | Hairul Bahri   | Blue Jeans      | Celana |    2 |
+-- | 2023-05-02 | 1456000 | Sofyan Saori   | Flanel Kemejaku | Kemeja |    5 |
+-- +------------+---------+----------------+-----------------+--------+------+
+
 
 
 
@@ -113,17 +118,22 @@ SELECT * from pelanggan p JOIN pesanan ps ON p.id = ps.pelanggan_id;
 
 -- buatkan query panjang di atas menjadi sebuah view baru: pesanan_produk_vw (menggunakan join dari table pesanan,pelanggan dan produk)
 CREATE VIEW pesanan_produk_vw AS
-SELECT * FROM pesanan ps JOIN pelanggan p ON ps.pelanggan_id = p.id JOIN produk pr ON ps.produk_id = pr.id;
-
+SELECT ps.tanggal, ps.total, p.nama_pelanggan, pr.nama , jp.nama , pa.qty FROM pesanan_items pa 
+JOIN pesanan ps ON pa.pesanan_id = ps.id
+JOIN pelanggan p ON ps.pelanggan_id = p.id 
+JOIN produk pr ON pa.produk_id = pr.id 
+JOIN jenis_produk jp ON pr.jenis_produk_id = jp.id 
 
 SELECT * FROM pesanan_produk_vw;
 
---output
--- +----+------------+---------+--------------+-----------+----+-------+----------------+------+-----------+------------+----------------+----------------------+----------+----+-------+-------------+------------+------------+------+----------+-----------------+
--- | id | tanggal    | total   | pelanggan_id | produk_id | id | kode  | nama_pelanggan | jk   | tmp_lahir | tgl_lahir  | email          | alamat               | kartu_id | id | kode  | nama        | harga_beli | harga_jual | stok | min_stok | jenis_produk_id |
--- +----+------------+---------+--------------+-----------+----+-------+----------------+------+-----------+------------+----------------+----------------------+----------+----+-------+-------------+------------+------------+------+----------+-----------------+
--- |  1 | 2022-08-23 |  150000 |            1 |         1 |  1 | OR001 | Hairul Bahri   | L    | Situbondo | 2002-04-02 | irul@gmail.com | Situbondo Jawa Timur |        2 |  1 | TV001 | Toshiba     |     100000 |     120000 |   12 |       15 |               1 |
--- |  2 | 2023-05-02 | 1456000 |            3 |         2 |  3 | OR003 | Sofyan Saori   | L    | Bondowoso | 1998-04-01 | sof@gmail.com  | Bondowoso Jawa Timur |        2 |  2 | K0001 | Home Kulkas |     300000 |     320000 |   10 |       12 |               2 |
--- +----+------------+---------+--------------+-----------+----+-------+----------------+------+-----------+------------+----------------+----------------------+----------+----+-------+-------------+------------+------------+------+----------+-----------------+
--- 2 rows in set (0.001 sec)
+
+
+-- output
+-- +------------+---------+----------------+-----------------+--------+------+
+-- | tanggal    | total   | nama_pelanggan | nama            | nama   | qty  |
+-- +------------+---------+----------------+-----------------+--------+------+
+-- | 2022-08-23 |  150000 | Hairul Bahri   | Blue Jeans      | Celana |    2 |
+-- | 2023-05-02 | 1456000 | Sofyan Saori   | Flanel Kemejaku | Kemeja |    5 |
+-- +------------+---------+----------------+-----------------+--------+------+
+
 
