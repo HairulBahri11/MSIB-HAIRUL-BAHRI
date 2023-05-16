@@ -1,18 +1,15 @@
 <?php
-session_start();
 include 'koneksi.php';
 include_once 'models/produk.php';
 include_once 'models/jenis_produk.php';
 include_once 'models/kartu.php';
+include_once 'models/Member.php';
 include_once 'models/pelanggan.php';
 include_once 'models/pesanan.php';
 //memanggil dan memproses file bagian atas
 include_once 'top.php';
 //memanggil dan memproses file bagian menu
 include_once 'menu.php';
-
-// $sesi = $_SESSION['MEMBER'];
-// if (!isset($sesi)) {
 ?>
 <div id="layoutSidenav_content">
     <main>
@@ -40,5 +37,4 @@ include_once 'menu.php';
 <?php
 //memanggil file bagian bawah
 include_once 'bottom.php';
-        // };
 ?>

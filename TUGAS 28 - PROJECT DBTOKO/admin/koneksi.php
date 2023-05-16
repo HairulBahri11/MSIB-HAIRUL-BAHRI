@@ -1,5 +1,5 @@
 <?php
-$dbname = 'dbtoko';
+$dbname = 'dbpos';
 $dsn = 'mysql:dbname=' . $dbname . ';host:localhost';
 $user = 'root';
 $password = '';

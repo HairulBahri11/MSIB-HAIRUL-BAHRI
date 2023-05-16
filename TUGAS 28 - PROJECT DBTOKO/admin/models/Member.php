@@ -1,6 +1,7 @@
 <?php
-
-class Member{
+// include 'koneksi.php';
+class Member
+{
     private $koneksi;
     public function __construct()
     {
@@ -10,22 +11,10 @@ class Member{
 
     public function cekLogin($data)
     {
-        $sql = "SELECT * FROM member WHERE username = ? AND password = SHA1(MD5(?))";
+        $sql = "SELECT * FROM member WHERE username = ? AND password = SHA1(MD5(SHA1(?)))";
         $ps = $this->koneksi->prepare($sql);
         $ps->execute($data);
         $rs = $ps->fetch();
         return $rs;
     }
-
-    public function dataMember()
-    {
-        $sql = "SELECT * FROM member";
-        $ps = $this->koneksi->prepare($sql);
-        $ps->execute();
-        $rs = $ps->fetchAll();
-        return $rs;
-    }
 }
-
-
-?>
